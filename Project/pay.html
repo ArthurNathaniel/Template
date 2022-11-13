@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>My Flower|Shipping Address</title>
+  
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <!-- header section starts  -->
+
+<header>
+
+  <input type="checkbox" name="" id="toggler">
+  <label for="toggler" class="fas fa-bars"></label>
+
+  <a href="#" class="logo">My flower<span>.</span></a>
+
+  <nav class="navbar">
+      <a href="index.php">home</a>
+      <a href="#about">about</a>
+      <a href="#products">products</a>
+      <a href="#review">review</a>
+      <a href="#contact">`contact</a>
+  </nav>
+</header>
+<br>
+<br><br>
+<br><br>
+<br><br>
+<br><br>
+<br>
+  </div>
+  <section class="contact" id="contact">
+    <div class="row">
+      <form method="post" action="https://sheetdb.io/api/v1/fwk2iww5vm24q" id="sheetdb-form">
+        <br>
+        <br>
+        <h1 style="text-align: center;">Shipping Address</h1>
+        <br>
+        <br>
+            <label>Name</label>
+        <input type="text" name="data[name]" placeholder="Enter your fullname" class="box">
+        <label>Email</label>
+        <input type="email" name="data[email]" placeholder="Enter your email" class="box">
+        <label>Address</label>
+        <input type="address" name="data[address]" placeholder="Enter your address" class="box">
+        <label>Zip code</label>
+        <input type="zip" name="data[zip]" placeholder="Enter your zip" class="box">
+        <label>Country</label>
+        <input type="country" name="data[country]" placeholder="Enter your country" class="box">
+        <label>Region</label>
+        <input type="region" name="data[region]" placeholder="Enter your region" class="box">
+        <label>Telephone</label>
+        <input type="text" name="data[number]" placeholder="Enter your telephone number" class="box">
+        
+        
+        <button type="submit" class="btn" name="reg_user">Submit</button>
+      </form>
+<style>
+  a{
+    color: #fff;
+  }
+</style>
+<script>
+  var form = document.getElementById('sheetdb-form');
+  form.addEventListener("submit", e => {
+    e.preventDefault();
+    fetch(form.action, {
+        method : "POST",
+        body: new FormData(document.getElementById("sheetdb-form")),
+    }).then(
+        response => response.json()
+    ).then((html) => {
+      // you can put any JS code here
+      window.location.href = 'payment.html';
+    });
+  });
+</script>
+      
+      <div class="image">
+        <img src="images/contact-img.svg" alt="">
+      </div>
+    </div>
+    <section class="footer">
+      <div class="box-container">
+          <div class="box">
+              <h3>quick links</h3>
+              <a href="index.php">home</a>
+              <a href="#about">about</a>
+              <a href="#products">products</a>
+              <a href="#review">review</a>
+              <a href="#contact">contact</a>
+          </div>
+      </div>
+      <div class="credit">  <span>  </span>Copyright ©2014 | All Rights Reserved</div>
+  </section>
+  </body>
+  </html>
